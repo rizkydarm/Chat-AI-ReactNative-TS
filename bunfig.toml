@@ -1,0 +1,13 @@
+install = {
+  peer = false,
+  optional = true,
+  backend = "hardlink"
+}
+
+run = {
+  shell = "bun"
+}
+
+lockfile = {
+  save = true
+}

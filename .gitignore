@@ -1,38 +1,85 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ─── Dependencies ──────────────────────────────────────────────
+node_modules/
 
-# Dependencies
-node_modules
-.pnp
-.pnp.js
+# ─── Bun ───────────────────────────────────────────────────────
+# NOTE: Do NOT ignore bun.lockb in version control! 
+# It is essential for deterministic installs across CI and other developers.
+# Uncomment the line below ONLY if you intentionally want to ignore it.
+# bun.lockb
 
-# Local env files
+# ─── Build & Compilation ───────────────────────────────────────
+dist/
+out/
+build/
+*.tsbuildinfo
+
+# ─── Turborepo ─────────────────────────────────────────────────
+.turbo/
+
+# ─── Expo / React Native ───────────────────────────────────────
+.expo/
+web-build/
+# If you are using Expo Prebuild or bare workflow, 
+# uncomment the lines below to ignore native generated folders:
+# ios/
+# android/
+
+# Expo native credentials (never commit these)
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# ─── Environment & Secrets ─────────────────────────────────────
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Testing
-coverage
-
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
-# Build Outputs
-.next/
-out/
-build
-dist
-
-
-# Debug
+# ─── Logs ──────────────────────────────────────────────────────
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+bun-debug.log*
+pnpm-debug.log*
 
-# Misc
+# ─── Testing & Coverage ────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ─── IDE & Editors ─────────────────────────────────────────────
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+
+# ─── OS Specific ───────────────────────────────────────────────
 .DS_Store
-*.pem
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Miscellaneous ─────────────────────────────────────────────
+.cache/
+.temp/
+.tmp/
+*.tgz
