@@ -2,7 +2,7 @@
 // It is safe to delete this file as it does not affect the functionality of your application.
 {
   "cesVersion": "2.21.3",
-  "projectName": "chat-with-ai",
+  "projectName": "chat_with_ai",
   "packages": [
     {
       "name": "expo-router",
@@ -37,12 +37,12 @@
     }
   ],
   "flags": {
-    "noGit": false,
+    "noGit": true,
     "noInstall": true,
     "overwrite": false,
     "importAlias": true,
     "packageManager": "bun",
-    "eas": false,
+    "eas": true,
     "publish": false
   },
   "packageManager": {
